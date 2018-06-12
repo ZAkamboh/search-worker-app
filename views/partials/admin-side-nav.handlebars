@@ -1,0 +1,83 @@
+
+<ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+
+
+  <a href="/admin" style="float:right;color:red;font-size:20px;margin-left:40px;margin-top:40px">
+  {{#if user}}{{user.name}}
+  <img class="d-flex mr-3 rounded-circle" src="/uploads/{{user.file}}" style="height:50px;width:50px" alt="">
+  {{/if}}
+  </a>
+
+
+
+
+  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+    <a class="nav-link" href="/">
+      <i class="fa fa-fw fa-dashboard"></i>
+      <span class="nav-link-text">HOME</span>
+    </a>
+  </li>
+
+  {{#if user}}
+  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+    <a  class='btn btn-danger' href="/edit/{{user.id}}">
+      <i class="fa fa-fw fa-dashboard"></i>
+      <span class="nav-link-text">edit profile</span>
+    </a>
+  </li>
+
+{{/if}}
+
+
+
+
+
+   <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+    <a class="nav-link" href="/signup">
+      <i class="fa fa-fw fa-link"></i>
+      <span class="nav-link-text">SIGNUP</span>
+    </a>
+  </li>
+
+
+
+   <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+    <a class="nav-link" href="/login">
+      <i class="fa fa-fw fa-link"></i>
+      <span class="nav-link-text">LOGIN</span>
+    </a>
+  </li>
+
+
+  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+    <a class="nav-link" href="/admin/category">
+      <i class="fa fa-fw fa-link"></i>
+      <span class="nav-link-text">services</span>
+    </a>
+  </li>
+
+
+  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+    <a class="nav-link" href="#">
+      <i class="fa fa-fw fa-link"></i>
+      <span class="nav-link-text">comments</span>
+    </a>
+  </li>
+
+
+  {{#if user}}
+  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+    <a  class='btn btn-success' href="/location">
+      <i class="fa fa-fw fa-map"></i>
+      <span class="nav-link-text">current location</span>
+    </a>
+  </li>
+
+{{/if}}
+
+
+
+
+
+
+</ul>
