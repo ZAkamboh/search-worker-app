@@ -11,13 +11,17 @@ router.get('/', (req, res) => {
     res.render("home/index.handlebars",{user:req.user});
 
 })
+router.get('/dashboard', (req, res) => {
 
-router.get('/', (req, res) => {
+
+    res.render("home/dashboard.handlebars");
 
 
-    res.render("home/index.handlebars",{user:req.user});
+})
+router.get('/logout', (req, res) => {
 
-yy    req.logOut();
+
+    req.logOut();
     res.redirect('/');
 
 
@@ -29,7 +33,6 @@ router.get('/location', (req, res) => {
      res.render('home/location.handlebars');
 
   });
-
 
 
 
