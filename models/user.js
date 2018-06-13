@@ -15,6 +15,13 @@ email:{
 
     },
 
+    num:{
+
+        type:String
+
+        },
+
+
     password:{
 
     type:String

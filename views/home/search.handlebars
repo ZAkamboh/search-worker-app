@@ -1,8 +1,29 @@
-{{#each na}}
+<h1> all workers here </h1>
 
 
+<table class="table table-bordered">
 
-{{name}}
+<tr>
+
+<th>workers  </th>
+<th> name </th>
+<th>email </th>
+
+<th>contact no </th>
+<th>picture </th>
+
+</tr>
+{{#each sign}}
+<tr>
+
+<td>{{select}} </td>
+<td>{{name}} </td>
+<td>{{email}} </td>
+<td>{{num}} </td>
+<td><img src='/uploads/{{file}}' height="40"</img> </td>
+
 
 
 {{/each}}
+</tr>
+</table>

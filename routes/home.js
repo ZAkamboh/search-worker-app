@@ -91,6 +91,10 @@ router.post('/signup', (req, res) => {
         errors.push({ message: 'password field is required' })
 
     }
+    if (!req.body.cont) {
+        errors.push({ message: 'contact number  field is required' })
+
+    }
     if (!req.body.confirmpass) {
         errors.push({ message: ' plz match password' })
 
@@ -122,6 +126,7 @@ if(response===null){
 
             name: req.body.name,
             email: req.body.email,
+            num:req.body.cont,
             password: req.body.password,
             select: req.body.select,
             file: filename
@@ -234,7 +239,14 @@ failureFlash : true
 router.get('/home/search',(req,res)=>{
 
 
+signup.find({}).then((sign)=>{
+
+res.render('home/search.handlebars',{sign:sign})
+
+
 })
+
+ })
 
 
 
